@@ -20,6 +20,7 @@ group :development, :test do
 	gem 'sqlite3'
 	
 end
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -36,7 +37,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'cosway'
+ gem 'puma'
 
 # gem 'puma', '~> 2.11.3'
 
