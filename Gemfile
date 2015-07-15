@@ -11,6 +11,11 @@ gem 'sass-rails', '~> 4.0.3'
 # allows for files to be attached
 gem "paperclip", "~> 4.2"
 
+gem "paperclip-dropbox", ">= 1.1.7"
+
+#Gemfile
+gem "figaro", "~> 0.7.0"
+
 group :production do 
 	gem 'pg'
 	gem 'rails_12factor'
