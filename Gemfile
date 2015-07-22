@@ -13,8 +13,11 @@ gem "paperclip", "~> 4.2"
 
 gem "paperclip-dropbox", ">= 1.1.7"
 
-#Gemfile
+#Gemfile allows for ignoring certain files on upload
 gem "figaro", "~> 0.7.0"
+
+# Abilty to add users to sign in/out
+gem 'devise'
 
 group :production do 
 	gem 'pg'
