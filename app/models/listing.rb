@@ -7,7 +7,7 @@ class Listing < ActiveRecord::Base
 		belongs_to :user
 	else
 
-	has_attached_file :image, :styles => { :medium => "200x>", :thumb => "100x100>" }, :default_url => "missing.png",
+		has_attached_file :image, :styles => { :medium => "200x>", :thumb => "100x100>" }, :default_url => "missing.png",
 		:storage => :dropbox,
     	:dropbox_credentials => Rails.root.join("config/dropbox.yml"),
     	:path => ":style/:id_:filename"
@@ -15,10 +15,9 @@ class Listing < ActiveRecord::Base
     	# relationship of listing and users db 
 		belongs_to :user
     end
-    		
-	# validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+    
 
-	 validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
 	validates :name, :description, :price, presence: true
 	# must be numeric and greater than 10  
